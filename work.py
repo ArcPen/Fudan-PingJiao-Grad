@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 import time
 from random import random
 
@@ -24,7 +25,7 @@ time.sleep(3)
 try:
     driver.find_element(By.ID, 'guideShut').click()
     # shut.click()
-except Exception as e: # better change it to NotFoundException
+except NoSuchElementException as e:
     pass
 
 while True:
@@ -32,7 +33,7 @@ while True:
     time.sleep(2)
     try:
         driver.find_element(By.ID, 'guideShut').click()
-    except Exception as e: # better change it to NotFoundException
+    except NoSuchElementException as e:
         pass
 
     xpath = '/html/body/main/article/section/div[2]/div/div[2]/div/div/div/div/div/div'
@@ -53,7 +54,7 @@ while True:
     time.sleep(3)
     try:
         driver.find_element(By.ID, 'guideShut').click()
-    except Exception as e: # better change it to NotFoundException
+    except NoSuchElementException as e:
         pass
 
     
@@ -62,7 +63,7 @@ while True:
     radio_list = driver.find_elements(By.CLASS_NAME, 'paper_tm')
     print("Total radio buttons: ", len(radio_list))
     for i in range(len(radio_list)):
-        grad = 1 if random() < 0.9 else 2 # 0.9 chance of choosing the first one
+        grad = 1 if random() < 0.93 else 2 # the chance of choosing the first one
         node = radio_list[i].find_element(By.XPATH, f'./div/label[{grad}]')
         # print(node.find_element(By.XPATH, './span').text)
         driver.execute_script("arguments[0].click();", node)
