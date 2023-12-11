@@ -33,3 +33,5 @@
 6. 还有什么问题的话，欢迎提issue或者发邮件给我 shinkyre@outlook.com
 
 7. 最后祝您，评教愉快
+
+觉得好用的话留个star
