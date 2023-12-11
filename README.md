@@ -4,6 +4,8 @@
 
 1. 命令行下`pip3 install selenium`安装selenium，请使用4.x版本的selenium
 
+   作者用的环境：python 3.10 + selenium 4.16
+
 2. 在clone或者下载本项目获得work.py（python脚本）
 
 3. 用文本编辑器打开work.py文件（如果是windows就右键-打开方式-记事本），在文件开头找到下面几行代码
