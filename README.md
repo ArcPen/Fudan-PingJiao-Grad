@@ -1,10 +1,24 @@
-1. 安装python3（已上传可执行文件版本，无需安装python3，如有需要请移步[releases](https://github.com/hohboy/Fudan_pingjiao/releases)，但仍需配置chromedriver，配置方法参考本文档第$4$点
+# Fudan PingJiao Graduate
 
-2. 命令行下`pip3 install selenium`安装selenium
+> “属于研究生自己的评教脚本”
 
-3. 在clone或者下载本项目获得work.py（python脚本）
+1. 命令行下`pip3 install selenium`安装selenium，请使用4.x版本的selenium
 
-4. 下载对应浏览器的webdriver
+2. 在clone或者下载本项目获得work.py（python脚本）
+
+3. 用文本编辑器打开work.py文件（如果是windows就右键-打开方式-记事本），在文件开头找到下面几行代码
+
+   ```python
+   username = ''
+   password = ''
+   sleep_time = 10 
+   ```
+
+   前两行引号内分别填入uis用户名和密码。第三行的参数表示填完一个问卷后等待多久提交，可以按需更改
+
+4. 命令行中`python3 work.py`运行python脚本
+
+5. 如果遇到问题的话，尝试下载对应浏览器的webdriver
 
    以下是chrome的浏览器webdriver下载地址，选择和自己chrome对应版本的chromedriver（可以再chrome浏览器网址栏中输入`chrome://version`查看，下载好了把里面的东西解压出来：
 
@@ -14,17 +28,6 @@
 
    [Chrome web driver](http://chromedriver.storage.googleapis.com/index.html)
 
-5. 用文本编辑器打开work.py文件（如果是windows就右键-打开方式-记事本），找到下面两行代码
+6. 还有什么问题的话，欢迎提issue或者发邮件给我 shinkyre@outlook.com
 
-   ```c++
-   username = ''
-   password = ''
-   ```
-
-   引号内分别填入uis用户名和密码
-
-6. 命令行中`python3 work.py`运行python脚本
-
-7. 不同环境可能会不兼容，我的环境是mac，在linux也测试过，目前都只支持chrome浏览器。如果遇到问题可以发邮件到`llsun18@fudan.edu.cn`
-
-8. 祝大家评教愉快
+7. 最后祝您，评教愉快
